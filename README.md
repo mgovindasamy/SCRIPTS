@@ -1,0 +1,2 @@
+# SCRIPTS
+generic oracle scripts
