@@ -1,0 +1,12 @@
+set long 10000
+select TEXT
+FROM DBA_VIEWS
+where OWNER = 'SYS'
+and VIEW_NAME  = 'DBA_REGISTERED_ARCHIVED_LOG';
+
+
+set long 10000
+select TEXT
+FROM DBA_VIEWS
+where OWNER = 'ADHOC_RPT1_DBO'
+and VIEW_NAME ='V_CACTUS'
