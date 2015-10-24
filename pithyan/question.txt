@@ -1,0 +1,37 @@
+ORACLE DBA TEST - PYTHIAN
+
+ 
+
+You will need access to an Oracle database of version 9i or higher to answer some of the questions. There is a 2MB dump file attached...good luck
+
+1) Because of DBA error (before we started obviously!), an important database was created with a 2k block size, and as it is physically on a SAN with an 8k write chunk, we are dealing with unnecessary performance implications.
+
+Please prepare a detailed, technical and logistical project plan for our conversion of our database from a 2k block size to an 8k block size, which answers the following questions:
+How do you plan to do it? 
+What do you plan to do?
+In what order will you perform the steps to achieve this conversion?
+How long do you think it will take to complete this process?
+
+For estimation purposes, a full database export of this database takes 12 hours, and we estimate a full database import would take about two to three times as long because of index re-creation time. Assume our cost of down-time is $10,000 per hour and as a result it's very important to come up with methods of reducing downtime. Needless to say, 36 hours of downtime, at a cost of $360,000 is completely out of the question. Obviously, with such a high cost of downtime, we have properly resourced the environment in terms of disk space on the SAN. As well, we have a spare server available if necessary to further reduce the downtime.
+
+
+@@@@@@@@@#############################################
+3) Using the INTERVIEW SCHEMA:
+We require a PL/SQL program to be written that will take the data in the TSOURCE table and complete the following steps: 
+1. Insert rows not currently in the TDEST table and
+
+2. Update TDEST rows with a matching KEYVAL value with the data in TSOURCE.
+
+How will you write the program  in a way that  maximizes overall performance and efficiency?
+Be sure to carefully rollback your work after every attempt at running your program so that you have a chance to try again!
+Bonus points if you can measure for us exactly how many buffers get your PL/SQL program uses using tkprof.
+
+@@@@@@@@@#############################################
+4) Please install statspack/perfstat to take performance snapshots every 15 minutes on the 15 minute mark except during our batch window of midnight to 7am. During that midnight to 7am window, we would like performance snapshots taken every 2 hours at the top of the hour (midnight, 2, 4 and 6).What will you do to achieve this goal?
+
+I am really interested in the scheduling part not the content of the perfstat reports themselves.
+
+
+
+
+ 
